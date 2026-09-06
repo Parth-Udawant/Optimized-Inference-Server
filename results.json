@@ -1,0 +1,22 @@
+{
+  "PyTorch FP32": {
+    "latency_mean_ms": 26.762796400003026,
+    "latency_p95_ms": 35.40029154993931,
+    "size_mb": 21.11059284210205
+  },
+  "ONNX FP32": {
+    "latency_mean_ms": 8.540914160003013,
+    "latency_p95_ms": 10.720619300008138,
+    "size_mb": 21.186767578125
+  },
+  "ONNX Dynamic INT8": {
+    "latency_mean_ms": 107.16374186999474,
+    "latency_p95_ms": 180.53764799994383,
+    "size_mb": 5.508288383483887
+  },
+  "ONNX Static INT8": {
+    "latency_mean_ms": 11.109331580005346,
+    "latency_p95_ms": 15.284062899968372,
+    "size_mb": 5.631126403808594
+  }
+}
