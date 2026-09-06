@@ -14,7 +14,7 @@ request batching.
 | ONNX Dynamic INT8 | 107.2ms | 180.5ms | 5.5MB |
 | ONNX Static INT8 | 11.1ms | 15.3ms | 5.6MB |
 
-![Model comparison](results_comparison_p2.png)
+![Model comparison](results_comparison.png)
 
 ## Key finding: the inverse of a companion transformer project
 
