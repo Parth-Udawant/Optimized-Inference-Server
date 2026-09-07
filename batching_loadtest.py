@@ -105,7 +105,7 @@ augment = transforms.Compose([
     transforms.ColorJitter(brightness=0.3, contrast=0.3),
 ])
 
-N = 30
+N = 250
 test_files = []
 for i in range(N):
     base_img = images[i % len(images)]
