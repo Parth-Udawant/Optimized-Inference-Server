@@ -35,19 +35,19 @@ directions, on real measured numbers.
   near-zero overhead instead of re-running inference.
 - **Dynamic batching:** requests arriving within a 20ms window are grouped
   into a single batched inference call (relies on a batch-dynamic ONNX
-  export). Under 30 concurrent requests: **45.7 req/s unbatched to 367.1
-  req/s batched, an 8.03x throughput improvement.**
+  export). Under 250 concurrent requests: **36.1 req/s unbatched to 410.1
+  req/s batched, an 11.36x throughput improvement.**
 - **Parallelism:** explicit ONNX Runtime `intra_op`/`inter_op` thread
   configuration.
 
-![Throughput comparison](throughput_comparison.png)
+![Throughput comparison](concurrent_load_comparison.png)
 
 ## Methodology
 
 - **Model:** MobileNetV3-Large (ImageNet-pretrained, torchvision)
 - **Latency:** 100 timed single-image inference calls after 10 discarded
   warm-up calls (CPU)
-- **Load test:** 30 concurrent requests via a thread pool, using distinct
+- **Load test:** 250 concurrent requests via a thread pool, using distinct
   augmented images so every request is a cache miss, isolating the batching
   effect specifically
 
